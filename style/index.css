@@ -1,0 +1,354 @@
+:root{
+    --bg: rgb(153,166,175);
+    --bg-linear: linear-gradient(90deg, rgba(153,166,175,0.15730042016806722) 0%, rgba(110,116,119,0.11808473389355745) 100%);
+
+    --bg-card: rgb(79,140,236);
+    --bg-card-linear: linear-gradient(90deg, rgba(79,140,236,0.22452731092436973) 0%, rgba(132,86,224,0.1292892156862745) 100%);
+    --shadow: 0 0 2px #8163c7;
+}
+
+html {
+    /* 1rem = 10px */
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Primer cuadrante blanco */
+.div-gastos-formulario{
+    background: var(--bg);
+    background: var(--bg-linear);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 2rem;
+}
+
+.div-gastos-formulario h2{
+    display: flex;
+}
+
+.div-formulario{
+    grid-column: 1 / 2;
+}
+
+.error{
+    border-radius: 8px;
+    background-color: red;
+    padding: 1rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 1rem;
+}
+
+.exito{
+    border-radius: 8px;
+    background-color: rgba(36, 57, 245, 0.76);
+    padding: 1rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 1rem;
+}
+
+.no-gasto-alerta{
+    border-radius: 8px;
+    background-color: rgba(255, 208, 0, 0.548);
+    padding: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.filtro{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.filtro select{
+    height: 3rem;
+}
+
+#filtrar{
+    background-color: #56657341;
+}
+
+.gastosValor{
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.formulario-gasto{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    text-align: start;
+    font-size: 3rem;
+    padding: 2rem;
+    border-radius: 8px;
+    background: var(--bg-card);
+    background: var(--bg-card-linear);
+    box-shadow: var(--shadow);
+}
+
+.formulario-campos{
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    align-items: end;
+}
+
+.formulario-input{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+select, input, textarea{
+    width: 20rem;
+    border: 0;
+    border-radius: 8px;
+    padding: .8rem;
+    outline: none;
+}
+
+textarea{
+    height: 15rem;
+}
+
+button[type="submit"]{
+    width: 15rem;
+    height: 5rem;
+    border: 0;
+    border-radius: 8px;
+    background-color: rgba(36, 57, 245, 0.76);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease-in-out .5s;
+}
+
+button[type="submit"]:hover{
+    background-color: rgb(36, 57, 245);
+}
+
+textarea{
+    resize: vertical;
+    width: 25rem;
+}
+
+.info-general{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.informacion-gastos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--bg);
+    background: var(--bg-linear);
+}
+
+/* Area de informacion de los gastos */
+
+.gastos{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.gasto-info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+}
+
+.gasto-info-btn{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+
+.gasto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    gap: 1rem;
+    border-radius: 8px;
+    background: var(--bg-card);
+    background: var(--bg-card-linear);
+    box-shadow: var(--shadow);
+}
+
+.btn-eliminar-gasto{
+    background-color: rgba(255, 29, 29, 0.911);
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    border: 0;
+    border-radius: 8px;
+    transition: ease-in-out .5s;
+}
+
+.btn-eliminar-gasto:hover{
+    background-color: rgb(255, 0, 0);
+
+}
+
+.btn-editar-gasto{
+    background-color: rgba(3, 90, 0, 0.911);
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    border: 0;
+    border-radius: 8px;
+    transition: ease-in-out .5s;
+}
+
+.btn-editar-gasto:hover{
+    background-color: rgb(4, 126, 0);
+
+}
+
+/* Ultimos movimientos */
+
+.ultimos-movimientos{
+    background: var(--bg);
+    background: var(--bg-linear);
+}
+
+.gasto-max-min{
+    color: red;
+}
+
+/* Parrafos */
+h1{
+    font-size: 4.5rem;
+}
+
+h2{
+    font-size: 3.5rem;
+}
+
+.formulario-gasto label, .filtro label{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+p, span{
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.gasto p, .gasto span{
+    font-size: 2.2rem;
+    text-align: start;
+}
+
+.gasto-gasto span{
+    color: red;
+}
+
+.grafico{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.grafico-canvas{
+    border-radius: 8px;
+    background: var(--bg-card);
+    background: var(--bg-card-linear);
+    box-shadow: var(--shadow);
+}
+
+/* Tablet */
+@media (max-width: 1077px) {
+
+    .container{
+        align-items: center;
+    }
+
+    .div-gastos-formulario{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        width: 90%;
+    }
+
+    .div-gastos-formulario div{
+        width: 100%;
+        align-items: center;
+    }
+
+    .formulario-gasto{
+        gap: 0;
+        align-items: center;
+    }
+
+    .formulario-campos{
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .filtro{
+        flex-direction: column;
+    }
+
+    .info-general{
+        display: flex;
+        flex-direction: column;
+        width: 94%;
+    }
+
+    input, select, textarea{
+        width: 100%;
+    }
+    
+}
+
+
+/* Mobil */
+@media (max-width: 560px) {
+
+    .div-gastos-formulario{
+        width: 90%;
+    }
+
+    .info-general{
+        width: 100%;
+    }
+    
+}

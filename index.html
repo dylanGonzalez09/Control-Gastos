@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Gastos</title>
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body class="body">
+    <div class="container">
+        <h1>Controla Todos tus Gastos</h1>
+
+        <div class="div-gastos-formulario">
+            <h2>Introduce tus Gastos</h2>
+            <div class="div-formulario">
+                <form class="formulario-gasto">
+                    <div class="formulario-campos">
+                        <div class="formulario-input">
+                            <label for="categoria">Categoria:</label>
+                            <select id="categoria-formulario">
+                                <option selected disabled>-- SELECCIONAR --</option>
+                            </select>
+                        </div>
+
+                        <div class="formulario-input">
+                            <label for="fecha">Fecha:</label>
+                            <input id="fecha" type="date">
+                        </div>
+            
+                        <div class="formulario-input">
+                            <label for="gasto">Gasto:</label>
+                            <input id="gasto-formulario" autocomplete="off" type="text" min="1" placeholder="Ej: 43.00">
+                        </div>
+                    </div>
+        
+                    <div class="formulario-campos">
+                        <div class="formulario-input">
+                            <label for="descripcion">Descripcion:</label>
+                            <textarea id="descripcion" autocomplete="off" placeholder="Una descipcion de tu gasto..."></textarea>
+                        </div>
+            
+                        <button id="agregar" type="submit">Agregar</button>
+                    </div>            
+                </form>
+                <div class="alerta"></div>
+            </div>
+
+            <div class="filtro">
+                <label for="filtro">Filtrar por:</label>
+                <select id="filtro">
+                    <option selected>-- SELECCIONAR --</option>
+                </select>
+            </div>
+
+            <div class="gastosValor">
+                <p class="gasto-maximo"></p>
+                <p class="gasto-minimo"></p>
+            </div>
+        </div>
+
+        <div class="info-general">
+            <div class="informacion-gastos">
+                <h2>Informacion de los Gastos</h2>
+
+                <div class="gastos">
+                </div>
+
+            </div>
+
+            <div class="ultimos-movimientos">
+                <h2>Ultimos Movimientos</h2>
+
+                <div class="grafico">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./src/index.js"></script>
+</body>
+</html>
