@@ -1,0 +1,43 @@
+{
+    "name": "Control de Gastos",
+    "short_name": "Control It",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#000",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "./public/img/Control-it-72px.png",
+        "type": "image/png", "sizes": "72x72"
+      },
+      {
+        "src": "./public/img/Control-it-96px.png",
+        "type": "image/png", "sizes": "96x96"
+      },
+      {
+        "src": "./public/img/Control-it-128px.png",
+        "type": "image/png","sizes": "128x128"
+      },
+      {
+        "src": "./public/img/Control-it-144px.png",
+        "type": "image/png", "sizes": "144x144"
+      },
+      {
+        "src": "./public/img/Control-it-152px.png",
+        "type": "image/png", "sizes": "152x152"
+      },
+      {
+        "src": "./public/img/Control-it-192px.png",
+        "type": "image/png", "sizes": "192x192"
+      },
+      {
+        "src": "./public/img/Control-it-384px.png",
+        "type": "image/png", "sizes": "384x384"
+      },
+      {
+        "src": "./public/img/Control-it-512px.png",
+        "type": "image/png", "sizes": "512x512"
+      }
+    ]
+  }

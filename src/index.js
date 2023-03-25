@@ -20,6 +20,16 @@ let idEditado;
 let gastosFiltrados;
 let filtroAlmacenado;
 
+// Registrar service worker
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function() {
+      navigator.serviceWorker
+        .register("./serviceWorker.js")
+        .then(res => console.log("service worker registered"))
+        .catch(err => console.log("service worker not registered", err))
+    })
+}
+
 document.addEventListener('DOMContentLoaded', () =>{
     // Obtener los gastos del local storage y almacenarlos en el mismo arreglo o uno vacio si  no hay gastos
     gastos = JSON.parse(localStorage.getItem('gastos')) || [];
